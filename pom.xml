@@ -32,6 +32,11 @@
 				<artifactId>SpringCloudDemo-api</artifactId>
 				<version>0.0.1</version>
 			</dependency>
+			<dependency>
+				<groupId>com.lans</groupId>
+				<artifactId>SpringCloudDemo-security</artifactId>
+				<version>0.0.1</version>
+			</dependency>
 			
 			<dependency>
 				<groupId>mysql</groupId>
@@ -56,5 +61,6 @@
 		<module>SpringCloudDemo-api</module>
 		<module>SpringCloudDemo-provider-dept-8001</module>
     <module>SpringCloudDemo-consumer-80</module>
+    <module>SpringCloudDemo-security</module>
   </modules>
 </project>

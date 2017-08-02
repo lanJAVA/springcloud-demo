@@ -17,12 +17,12 @@ spring:
       initial-size: 5
       max-total: 5
       max-wait-millis: 200
-security:
-  basic:
-    enabled: true
-  user:
-    name: lans
-    password: hello
-    role:
-    - USER
-  sessions: stateless
+#security:
+#  basic:
+#    enabled: true
+#  user:
+#    name: lans
+#    password: hello
+#    role:
+#    - USER
+#  sessions: stateless
