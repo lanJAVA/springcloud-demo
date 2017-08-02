@@ -12,6 +12,7 @@ import org.SpringCloudDemo.service.IDeptService;
 import org.SpringCloudDemo.vo.Dept;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,6 +23,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class DeptRest {
   @Autowired
   private IDeptService deptService;
+  @Autowired
+  private DiscoveryClient client;
+  
+  @RequestMapping("/dept/discover")
+  public Object discover() {
+	  return this.client;
+  }
   
   @GetMapping("/dept/sessionId") 
   public Object id(HttpServletRequest request) {

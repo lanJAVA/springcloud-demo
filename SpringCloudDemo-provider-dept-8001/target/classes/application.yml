@@ -1,5 +1,21 @@
 server:
   port: 8001
+  
+eureka:
+  client:
+    service-url: 
+      defaultZone: http://eureka7001.com:7001/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 2
+    lease-expiration-duration-in-seconds: 5
+    instance-id: dept8001.com
+    prefer-ip-address: true
+info:
+  app.name: Dept-Service
+  company.name: com.lans
+  build.artifactId: SpringCloudDemo-provider-dept-8001
+  build.version: 0.0.1
+      
 mybatis:
   config-location: classpath:mybatis/mybatis-cfg.xml
   type-aliases-package: org.SpringCloudDemo.vo
@@ -17,6 +33,11 @@ spring:
       initial-size: 5
       max-total: 5
       max-wait-millis: 200
+  application:
+    name: Dept-Service
+      
+
+      
 #security:
 #  basic:
 #    enabled: true
