@@ -31,4 +31,7 @@
 		</dependencies>
 	</dependencyManagement>
 
+	<modules>
+		<module>SpringCloudDemo-api</module>
+	</modules>
 </project>
