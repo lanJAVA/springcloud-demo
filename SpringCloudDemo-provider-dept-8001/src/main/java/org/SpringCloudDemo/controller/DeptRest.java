@@ -10,6 +10,7 @@ package org.SpringCloudDemo.controller;
 
 import org.SpringCloudDemo.service.IDeptService;
 import org.SpringCloudDemo.vo.Dept;
+import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,6 +22,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class DeptRest {
   @Autowired
   private IDeptService deptService;
+  
+  @GetMapping("/dept/sessionId") 
+  public Object id(HttpServletRequest request) {
+    return request.getSession().getId();
+  }
   
   @GetMapping("/dept/get/{id}")
   public Object get(@PathVariable("id") long id) {
