@@ -25,3 +25,4 @@ security:
     password: hello
     role:
     - USER
+  sessions: stateless
