@@ -2,7 +2,7 @@ server:
   port: 7001
 spring:
   application:
-    name: eureka7001
+    name: EurekaServer
 eureka:
 #  server:
 #    enable-self-preservation: false
@@ -13,7 +13,7 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://eureka:hello@eureka7001.com:7001/eureka
+      defaultZone: http://eureka:hello@eureka7002.com:7002/eureka,http://eureka:hello@eureka7003.com:7003/eureka
       
 security:
   basic:

@@ -1,5 +1,5 @@
 server:
-  port: 7001
+  port: 7002
 spring:
   application:
     name: EurekaServer
@@ -8,12 +8,12 @@ eureka:
 #    enable-self-preservation: false
 #    eviction-interval-timer-in-ms: 3000
   instance:
-    hostname: eureka7001.com
+    hostname: eureka7002.com
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://eureka:hello@eureka7002.com:7002/eureka,http://eureka:hello@eureka7003.com:7003/eureka
+      defaultZone: http://eureka:hello@eureka7001.com:7001/eureka,http://eureka:hello@eureka7003.com:7003/eureka
       
 security:
   basic:

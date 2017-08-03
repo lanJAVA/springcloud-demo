@@ -65,6 +65,10 @@
 		</resources>
 		<plugins>
 			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
 				<configuration>
@@ -82,5 +86,7 @@
     <module>SpringCloudDemo-consumer-80</module>
     <module>SpringCloudDemo-security</module>
     <module>SpringCloudDemo-eureka-7001</module>
+    <module>SpringCloudDemo-eureka-7002</module>
+    <module>SpringCloudDemo-eureka-7003</module>
   </modules>
 </project>

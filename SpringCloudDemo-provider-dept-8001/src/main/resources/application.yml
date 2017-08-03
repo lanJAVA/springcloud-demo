@@ -4,7 +4,7 @@ server:
 eureka:
   client:
     service-url: 
-      defaultZone: http://eureka:hello@eureka7001.com:7001/eureka
+      defaultZone: http://eureka:hello@eureka7001.com:7001/eureka,http://eureka:hello@eureka7002.com:7002/eureka,http://eureka:hello@eureka7003.com:7003/eureka
   instance:
     lease-renewal-interval-in-seconds: 2
     lease-expiration-duration-in-seconds: 5
