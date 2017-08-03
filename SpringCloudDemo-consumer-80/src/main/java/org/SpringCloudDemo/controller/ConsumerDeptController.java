@@ -22,9 +22,9 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class ConsumerDeptController {
   
-  public static final String DEPT_GET_URL = "http://dept8001.com:8001/dept/get/";
-  public static final String DEPT_LIST_URL = "http://dept8001.com:8001/dept/list/";
-  public static final String DEPT_ADD_URL = "http://dept8001.com:8001/dept/add/";
+  public static final String DEPT_GET_URL = "http://DEPT-SERVICE/dept/get/";
+  public static final String DEPT_LIST_URL = "http://DEPT-SERVICE/dept/list/";
+  public static final String DEPT_ADD_URL = "http://DEPT-SERVICE/dept/add";
   
   @Autowired
   private RestTemplate restTemplate;

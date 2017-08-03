@@ -88,6 +88,8 @@
 	<modules>
 		<module>SpringCloudDemo-api</module>
 		<module>SpringCloudDemo-provider-dept-8001</module>
+		<module>SpringCloudDemo-provider-dept-8002</module>
+		<module>SpringCloudDemo-provider-dept-8003</module>
 	    <module>SpringCloudDemo-consumer-80</module>
 	    <module>SpringCloudDemo-security</module>
 	    <module>SpringCloudDemo-eureka-7001</module>
