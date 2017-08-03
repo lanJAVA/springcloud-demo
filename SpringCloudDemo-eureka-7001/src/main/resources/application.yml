@@ -9,9 +9,10 @@ eureka:
 #    eviction-interval-timer-in-ms: 3000
   instance:
     hostname: eureka7001.com
-  client:
-    register-with-eureka: false
-    fetch-registry: false
+    appname: EurekaServer
+  client: 
+    register-with-eureka: true
+    fetch-registry: true
     service-url:
       defaultZone: http://eureka:hello@eureka7002.com:7002/eureka,http://eureka:hello@eureka7003.com:7003/eureka
       

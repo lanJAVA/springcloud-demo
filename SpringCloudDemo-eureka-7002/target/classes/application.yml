@@ -4,14 +4,15 @@ spring:
   application:
     name: EurekaServer
 eureka:
-#  server:
+  server: 
 #    enable-self-preservation: false
-#    eviction-interval-timer-in-ms: 3000
-  instance:
+     eviction-interval-timer-in-ms: 3000 
+  instance: 
     hostname: eureka7002.com
+    appname: EurekaServer
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: true
+    fetch-registry: true
     service-url:
       defaultZone: http://eureka:hello@eureka7001.com:7001/eureka,http://eureka:hello@eureka7003.com:7003/eureka
       

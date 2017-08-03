@@ -12,6 +12,8 @@ import java.util.List;
 
 import org.SpringCloudDemo.vo.Dept;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -30,6 +32,8 @@ public class ConsumerDeptController {
   private RestTemplate restTemplate;
   @Autowired
   private HttpHeaders headers;
+  @Autowired
+  private LoadBalancerClient loadBalancerClient;
   
   @RequestMapping("/consumer/dept/get")
   public Object getDept(long id) {
@@ -42,6 +46,9 @@ public class ConsumerDeptController {
   @SuppressWarnings("unchecked")
   @RequestMapping("/consumer/dept/list")
   public Object listDept() {
+	  ServiceInstance serviceInstance = this.loadBalancerClient.choose("DEPT-SERVICE");
+	  System.out.println("【***ServiceInstance***】 host = " + serviceInstance.getHost() 
+			   + ", port = " + serviceInstance.getPort() + ", serviceId = " + serviceInstance.getServiceId());
 //    List<Dept> allDepts = this.restTemplate.getForObject(DEPT_LIST_URL, List.class);
     List<Dept> allDepts = this.restTemplate.exchange(DEPT_LIST_URL, HttpMethod.GET,
         new HttpEntity<Object>(this.headers), List.class).getBody();
