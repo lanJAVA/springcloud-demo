@@ -1,0 +1,23 @@
+server:
+  port: 7003
+spring:
+  application:
+    name: EurekaServer
+eureka:
+#  server:
+#    enable-self-preservation: false
+#    eviction-interval-timer-in-ms: 3000
+  instance:
+    hostname: eureka7003.com
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka:hello@eureka7001.com:7001/eureka,http://eureka:hello@eureka7002.com:7002/eureka
+      
+security:
+  basic:
+    enabled: true
+  user:
+    name: eureka
+    password: hello
