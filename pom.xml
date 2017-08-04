@@ -37,6 +37,11 @@
 				<artifactId>SpringCloudDemo-security</artifactId>
 				<version>0.0.1</version>
 			</dependency>
+			<dependency>
+				<groupId>com.lans</groupId>
+				<artifactId>SpringCloudDemo-service</artifactId>
+				<version>0.0.1</version>
+			</dependency>
 			
 			<dependency>
 				<groupId>mysql</groupId>
@@ -91,10 +96,12 @@
 		<module>SpringCloudDemo-provider-dept-8002</module>
 		<module>SpringCloudDemo-provider-dept-8003</module>
 	    <module>SpringCloudDemo-consumer-80</module>
+	    <module>SpringCloudDemo-consumer-feign</module>
 	    <module>SpringCloudDemo-security</module>
 	    <module>SpringCloudDemo-eureka-7001</module>
 	    <module>SpringCloudDemo-eureka-7002</module>
 	    <module>SpringCloudDemo-eureka-7003</module>
 	    <module>SpringCloudDemo-eureka-server</module>
+    <module>SpringCloudDemo-service</module>
   </modules>
 </project>
